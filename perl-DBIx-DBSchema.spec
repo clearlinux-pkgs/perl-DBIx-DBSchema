@@ -4,11 +4,11 @@
 #
 Name     : perl-DBIx-DBSchema
 Version  : 0.45
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdbix-dbschema-perl/libdbix-dbschema-perl_0.45-1.debian.tar.xz
-Summary  : unknown
+Summary  : Perl modile providing database-independent schema objects
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
 Requires: perl-DBIx-DBSchema-license = %{version}-%{release}
@@ -25,6 +25,7 @@ the same terms as Perl itself.
 Summary: dev components for the perl-DBIx-DBSchema package.
 Group: Development
 Provides: perl-DBIx-DBSchema-devel = %{version}-%{release}
+Requires: perl-DBIx-DBSchema = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBIx-DBSchema package.
@@ -43,7 +44,7 @@ license components for the perl-DBIx-DBSchema package.
 cd ..
 %setup -q -T -D -n DBIx-DBSchema-0.45 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/DBIx-DBSchema-0.45/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/DBIx-DBSchema-0.45/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/

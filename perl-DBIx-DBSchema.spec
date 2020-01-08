@@ -4,14 +4,15 @@
 #
 Name     : perl-DBIx-DBSchema
 Version  : 0.45
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdbix-dbschema-perl/libdbix-dbschema-perl_0.45-1.debian.tar.xz
-Summary  : Perl modile providing database-independent schema objects
+Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
 Requires: perl-DBIx-DBSchema-license = %{version}-%{release}
+Requires: perl-DBIx-DBSchema-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(DBI)
 
@@ -39,18 +40,28 @@ Group: Default
 license components for the perl-DBIx-DBSchema package.
 
 
+%package perl
+Summary: perl components for the perl-DBIx-DBSchema package.
+Group: Default
+Requires: perl-DBIx-DBSchema = %{version}-%{release}
+
+%description perl
+perl components for the perl-DBIx-DBSchema package.
+
+
 %prep
 %setup -q -n DBIx-DBSchema-0.45
-cd ..
-%setup -q -T -D -n DBIx-DBSchema-0.45 -b 1
+cd %{_builddir}
+tar xf %{_sourcedir}/libdbix-dbschema-perl_0.45-1.debian.tar.xz
+cd %{_builddir}/DBIx-DBSchema-0.45
 mkdir -p deblicense/
-cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/DBIx-DBSchema-0.45/deblicense/
+cp -r %{_builddir}/debian/* %{_builddir}/DBIx-DBSchema-0.45/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -60,7 +71,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -69,7 +80,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema
-cp deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema/deblicense_copyright
+cp %{_builddir}/DBIx-DBSchema-0.45/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema/1e1de1390a83645aeb28c01e30741470dde8647b
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -82,18 +93,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/Column.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD/Oracle.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD/Pg.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD/SQLite.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD/Sybase.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/DBD/mysql.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/ForeignKey.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/Index.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/Table.pm
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/DBSchema/_util.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -111,4 +110,19 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-DBIx-DBSchema/deblicense_copyright
+/usr/share/package-licenses/perl-DBIx-DBSchema/1e1de1390a83645aeb28c01e30741470dde8647b
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Column.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Oracle.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Pg.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/SQLite.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Sybase.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/mysql.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/ForeignKey.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Index.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Table.pm
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/_util.pm

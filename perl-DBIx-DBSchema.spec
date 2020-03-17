@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-DBSchema
 Version  : 0.45
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdbix-dbschema-perl/libdbix-dbschema-perl_0.45-1.debian.tar.xz
@@ -80,7 +80,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema
-cp %{_builddir}/DBIx-DBSchema-0.45/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema/1e1de1390a83645aeb28c01e30741470dde8647b
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-DBIx-DBSchema/1e1de1390a83645aeb28c01e30741470dde8647b
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -114,15 +114,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Column.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Oracle.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Pg.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/SQLite.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/Sybase.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/DBD/mysql.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/ForeignKey.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Index.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/Table.pm
-/usr/lib/perl5/vendor_perl/5.30.1/DBIx/DBSchema/_util.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Column.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Oracle.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Pg.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/SQLite.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Sybase.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/mysql.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/ForeignKey.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Index.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Table.pm
+/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/_util.pm

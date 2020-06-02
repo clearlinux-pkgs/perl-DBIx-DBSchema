@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-DBSchema
 Version  : 0.45
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.45.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdbix-dbschema-perl/libdbix-dbschema-perl_0.45-1.debian.tar.xz
@@ -114,15 +114,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Column.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Oracle.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Pg.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/SQLite.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/Sybase.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/DBD/mysql.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/ForeignKey.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Index.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/Table.pm
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/DBSchema/_util.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/Column.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD/Oracle.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD/Pg.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD/SQLite.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD/Sybase.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/DBD/mysql.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/ForeignKey.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/Index.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/Table.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/DBSchema/_util.pm

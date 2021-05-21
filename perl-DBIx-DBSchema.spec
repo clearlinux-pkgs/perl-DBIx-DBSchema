@@ -114,15 +114,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/Column.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD/Oracle.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD/Pg.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD/SQLite.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD/Sybase.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/DBD/mysql.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/ForeignKey.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/Index.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/Table.pm
-/usr/lib/perl5/vendor_perl/5.32.1/DBIx/DBSchema/_util.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/Column.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD/Oracle.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD/Pg.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD/SQLite.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD/Sybase.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/DBD/mysql.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/ForeignKey.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/Index.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/Table.pm
+/usr/lib/perl5/vendor_perl/5.34.0/DBIx/DBSchema/_util.pm

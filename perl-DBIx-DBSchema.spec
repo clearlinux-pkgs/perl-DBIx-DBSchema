@@ -7,7 +7,7 @@
 #
 Name     : perl-DBIx-DBSchema
 Version  : 0.47
-Release  : 30
+Release  : 31
 URL      : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.47.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IV/IVAN/DBIx-DBSchema-0.47.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libd/libdbix-dbschema-perl/libdbix-dbschema-perl_0.45-1.debian.tar.xz
